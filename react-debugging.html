@@ -63,11 +63,12 @@
           // No need to change anything ABOVE this line ^
 
           return(
+            <>
             <h1>Draw a Card</h1>
-            <button onClick={}>
+            <button onClick={this.drawCard}>
               Click to Draw a Card
             </button>
-            <button onClick={shuffle}>
+            <button onClick={this.shuffle}>
               Return Cards and Shuffle Deck
             </button>
             <div style={handStyles}>
@@ -79,9 +80,15 @@
                 )
               })}
             </div>
+            </>
           )
         }
       }
+
+      // Added {drawCard} on line 68
+      // Added '<>' on line 66 and added '</>' on line 83 
+      // Added 'this' to call the drawCard function
+      // Added 'this' to call the shuffle function
 
       // No need to change anything below this line
       const domContainer = document.querySelector('#react-container')
